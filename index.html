@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="li">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,9 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg shadow">
     <div class="container">
-        <!-- Brand Logo -->
         <a href="#" class="navbar-brand">
             <i class="fa-brands fa-bootstrap fa-lg" style="color: #5e77f3;"></i>
         </a>
@@ -23,55 +23,130 @@
              <span class="navbar-toggler-icon"></span>
         </button>
 
-
         <!--Collapsible menu-->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- Navigation links -->
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <div class="mb-2 w-50 mx-auto p-2">
+                <div class="input-group">
+                    <input type="text" name="" id="" class="form-control" placeholder="Search...">
+                    <button class="btn btn-primary">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <ul class="navbar-nav ms-auto mb-2 p-2">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link link-css">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link link-css">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link link-css">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Sign in</a>
+                    <!--Trigger button to a modal-->
+                    <a href="#" class="nav-link link-css"  data-bs-toggle="modal" data-bs-target="#loginModal">Log in</a>
                 </li>
             </ul>
         </div>
     </div>
+</nav>
 
-</nav>  
+<!--A log in Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-primary-emphasis">
+                    Log in to our System
+                </h5>
+                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                 <form action="" autocomplete="off">
+                    <div class="mb-3 input-group">
+                        <input type="text" name="username" id="username" class="form-control p-2" placeholder="Username...">
+                        <button class="btn btn-primary">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="mb-3 input-group">
+                        <input type="password" name="" id="" class="form-control p-2" placeholder="Password...">
+                        <button class="btn btn-primary">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="mb-3">
+                        <a href="" class="text-decoration-none" data-bs-target="#forgotPasswordModal" data-bs-toggle="modal">
+                             <h5 class="text-primary-emphasis">Forgot your password?</h5>
+                        </a>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-outline-primary w-100 p-2">
+                            Log In
+                        </button>
+                    </div>
+                 </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Forget password modal-->
+<div class="modal fade" id="forgotPasswordModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-text text-primary-emphasis">Reset your password?</h5>
+                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <p>To reset your password, request One-Time Password (OTP) using your Email Address or Mobile Number.</p>
+                </div>
+                <form action="">
+                    <div class="mb-3">
+                        <input type="email" name="email" id="email" class="form-control p-2" placeholder="Email Address or Mobile Number" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <button class="btn btn-outline-primary w-50 p-2">Request OTP</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--An Horizontal Card With a Form inside -->
 <div class="container my-4">
     <div class="row">
         <div class="col-md-12 mx-auto">
-            <div class="row rounded shadow">
+            <div class="row rounded shadow py-3">
                 <div class="col-md-6">
-                    <img src="/5234360.jpg" alt="" class="img-fluid w-100 h-100 rounded-start">
+                    <img src="/images/5234360.jpg" alt="" class="img-fluid w-100 h-100 rounded-start">
                 </div>
                 <div class="col-md-6">
                 <div class="mb-3">
-                    <h3 class="text-primary text-center text-italics">Create Account</h3>
+                    <h3 class="text-primary text-center">Create Account</h3>
                 </div>
                 <div class="mb-3 input-group">
-                    <input type="text" name="username" id="" class="form-control p-2" placeholder="Username">
+                    <input type="text" name="username" id="" class="form-control p-2" placeholder="Username...">
                     <button class="btn btn-primary">
                         <i class="fa-solid fa-eye"></i>
                     </button>    
                 </div>
                 <div class="mb-3 input-group">
-                    <input type="password" name="" id="" class="form-control" placeholder="Password">
+                    <input type="password" name="" id="" class="form-control" placeholder="Password...">
                     <button class="btn btn-primary">
                         <i class="fa-solid fa-eye"></i>
                     </button>
                 </div>
                 <div class="mb-3 input-group">
-                    <input type="password" name="confirm_password" id="" class="form-control" placeholder="Confirm Password">
+                    <input type="password" name="confirm_password" id="" class="form-control" placeholder="Confirm Password...">
                     <button class="btn btn-primary">
                         <i class="fa-solid fa-eye"></i>
                     </button>
@@ -80,14 +155,12 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <button class="btn btn-primary w-100">Sign in
-                              <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <button class="btn btn-secondary w-100">Cancel
-                               <i class="fa-solid fa-arrow-left"></i>
+                            <button class="btn btn-outline-primary w-100" data-bs-target="#loginModal" data-bs-toggle="modal">Log in
                             </button>
                         </div>
                     </div>
@@ -235,6 +308,10 @@
     </div>
 </div>
 
+
+
+        
+    
 <!--Bootstrap Carousel
 <div class="container my-4">
     <div class="row">

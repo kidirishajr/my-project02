@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="li">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
         }
         .card-pro:hover {
             background-color: #f8f9fa;
-            border-color: #0d6efd;
+            border-color: #f8f9fa;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
             transform: scale(1.05);
             transition: all 0.3s ease;
@@ -92,17 +92,13 @@
             </div>
             <div class="modal-body">
                  <form action="" autocomplete="off">
-                    <div class="mb-3 input-group">
-                        <input type="text" name="username" id="username" class="form-control p-2" placeholder="Username..." required>
-                        <button class="btn btn-primary">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
+                    <div class="mb-3 form-floating">
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Username..." required>
+                        <label for="username">Username</label>
                     </div>
-                    <div class="mb-3 input-group">
-                        <input type="password" name="password" id="password" class="form-control p-2" placeholder="Password..." required>
-                        <button class="btn btn-primary">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
+                    <div class="mb-3 form-floating">
+                        <input type="password" name="password" id="password-floating" class="form-control" placeholder="Password..." required>
+                        <label for="password-floating">Password</label>
                     </div>
                     <div class="mb-3">
                         <a href="" class="text-decoration-none" data-bs-target="#forgotPasswordModal" data-bs-toggle="modal">
@@ -110,7 +106,7 @@
                         </a>
                     </div>
                     <div class="mb-3">
-                        <button class="btn btn-outline-primary w-100 p-2">
+                        <button class="btn btn-outline-primary w-100 p-3">
                             Log In
                         </button>
                     </div>
@@ -136,12 +132,13 @@
                 <div class="mb-3">
                     <p>To reset your password, request One-Time Password (OTP) using your Email Address or Mobile Number.</p>
                 </div>
-                <form action="">
-                    <div class="mb-3">
-                        <input type="email" name="email" id="email" class="form-control p-2" placeholder="Email Address or Mobile Number" required>
+                <form action="" autocomplete="off">
+                    <div class="mb-3 form-floating">
+                        <input type="email" name="email" id="floatingEmail" class="form-control" placeholder="Email Address or Mobile Number" required>
+                        <label for="floatingEmail">Email Address or Mobile Number</label>
                     </div>
                     <div class="mb-3 text-center">
-                        <button class="btn btn-outline-primary w-50 p-2">Request OTP</button>
+                        <button class="btn btn-outline-primary w-50 p-3">Request OTP</button>
                     </div>
                 </form>
             </div>
@@ -149,7 +146,7 @@
     </div>
 </div>
 
-<!--An Horizontal Card With a Form inside -->
+<!--An Horizontal row-column With a Form inside -->
 <div class="container my-4">
     <div class="row">
         <div class="col-md-12 mx-auto">
@@ -161,40 +158,34 @@
                 <div class="mb-3">
                     <h3 class="text-primary text-center">Create Account</h3>
                 </div>
-                <div class="mb-3 input-group">
-                    <input type="text" name="username" id="" class="form-control p-2" placeholder="Username..." required>
-                    <button class="btn btn-primary">
-                        <i class="fa-solid fa-eye"></i>
-                    </button>    
-                </div>
-                <div class="mb-3 input-group">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password..." required>
-                    <button class="btn btn-primary">
-                        <i class="fa-solid fa-eye"></i>
-                    </button>
-                </div>
-                <div class="mb-3 input-group">
-                    <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password..." required>
-                    <button class="btn btn-primary">
-                        <i class="fa-solid fa-eye"></i>
-                    </button>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <button class="btn btn-primary w-100">Sign in
-                            </button>
+                <form action="" autocomplete="off">
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email Address..." required>
+                        <label for="email">Email Address...</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" name="password" id="password-floating" class="form-control" placeholder="Password..." required>
+                        <label for="password-floating">Password...</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password..." required>
+                        <label for="confirm_password">Confirm Password...</label>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <button class="btn btn-primary w-100 p-3">Sign up
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <button class="btn btn-outline-primary w-100 p-3" data-bs-target="#loginModal" data-bs-toggle="modal">Sign in
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <button class="btn btn-outline-primary w-100" data-bs-target="#loginModal" data-bs-toggle="modal">Log in
-                            </button>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+                </form>
             </div>
         </div>
     </div>
